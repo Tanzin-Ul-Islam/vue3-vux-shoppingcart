@@ -1,9 +1,7 @@
 <template>
-  <div>
     <Navbar />
     <Cart />
     <router-view />
-  </div>
 </template>
 
 <script>
