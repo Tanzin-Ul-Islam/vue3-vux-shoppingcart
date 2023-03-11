@@ -8,14 +8,15 @@
         alt="test"
         :height="214"
         :width="286"
+        @click="$router.push('/product/'+item.rname)"
       />
       <div class="card-body">
-        <h5 class="card-title">Test data</h5>
+        <h5 class="card-title">{{item.rname}}</h5>
         <p class="card-text">
-          <span style="font-weight: 600">Price: $34</span>
+          <span style="font-weight: 600">Price: ${{item.price}}</span>
         </p>
         <p class="card-text">
-          <span style="fontweight: 600">Rating: $4/5</span>
+          <span style="fontweight: 600">Rating: {{item.rating}}/5</span>
         </p>
         <a
           href="javascript:void(0)"
