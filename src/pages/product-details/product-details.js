@@ -6,7 +6,7 @@ export default {
             productName: this.$route.params.productName,
             productData: {},
             dataList: data,
-            quantity: 1,
+            quantity: 1
         }
     },
     created() {
