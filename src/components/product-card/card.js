@@ -1,6 +1,13 @@
+import { mapMutations, mapState } from "vuex"
 export default {
+    props: ["item"],
     data() {
 
     },
-    props: ["item"]
+    mutations:{
+        ...mapState(['cartList', 'cartCounter'])
+    },
+    methods:{
+        ...mapMutations(['addToCart']),
+    }
 }

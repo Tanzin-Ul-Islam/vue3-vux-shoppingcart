@@ -23,7 +23,7 @@
           <div class="cart-wrapper mt-1">
             <div class="cart-icon">
               <i class="fa fa-shopping-cart"></i>
-              <span class="cart-count">{{ 0 }}</span>
+              <span class="cart-count">{{ cartCounter }}</span>
             </div>
           </div>
           <button
@@ -38,7 +38,7 @@
     </div>
   </nav>
 </template>
-
+<script src="./navbar.js"></script>
 <style scoped>
 .cart-wrapper {
   position: relative;

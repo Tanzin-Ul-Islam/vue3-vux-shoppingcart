@@ -1,7 +1,7 @@
 <template>
-    <Navbar />
-    <Cart />
-    <router-view />
+  <Navbar />
+  <Cart />
+  <router-view />
 </template>
 
 <script>
@@ -11,6 +11,11 @@ export default {
   components: {
     Navbar,
     Cart,
+  },
+  created() {
+    if (!localStorage.getItem("cartList")) {
+      localStorage.setItem("cartList", null);
+    }
   },
 };
 </script>

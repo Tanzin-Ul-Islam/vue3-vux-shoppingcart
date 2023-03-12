@@ -8,21 +8,22 @@
         alt="test"
         :height="214"
         :width="286"
-        @click="$router.push('/product/'+item.rname)"
+        @click="$router.push('/product/' + item.rname)"
       />
       <div class="card-body">
-        <h5 class="card-title">{{item.rname}}</h5>
+        <h5 class="card-title">{{ item.rname }}</h5>
         <p class="card-text">
-          <span style="font-weight: 600">Price: ${{item.price}}</span>
+          <span style="font-weight: 600">Price: ${{ item.price }}</span>
         </p>
         <p class="card-text">
-          <span style="fontweight: 600">Rating: {{item.rating}}/5</span>
+          <span style="fontweight: 600">Rating: {{ item.rating }}/5</span>
         </p>
         <a
           href="javascript:void(0)"
           class="btn btn-outline-success"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasRight"
+          @click="addToCart({ data: item, quantity: 1 })"
           >Add to cart</a
         >
       </div>

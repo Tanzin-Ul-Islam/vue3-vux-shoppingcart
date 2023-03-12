@@ -33,15 +33,30 @@
               OverView: {{ productData.somedata }}
             </p>
             <div class="wrapper">
-              <button class="cart-btn btn--minus" type="button" name="button">-</button>
+              <button
+                class="cart-btn btn--minus"
+                type="button"
+                name="button"
+                @click="decreaseQuantity"
+              >
+                -
+              </button>
               <input class="quantity" type="text" name="name" v-model="quantity" />
-              <button class="cart-btn btn--plus" type="button" name="button">+</button>
+              <button
+                class="cart-btn btn--plus"
+                type="button"
+                name="button"
+                @click="increaseQuantity"
+              >
+                +
+              </button>
             </div>
             <a
               href="javascript:void(0)"
               class="btn btn-outline-success mt-4"
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasRight"
+              @click="handleAddtoCart"
               >Add to cart</a
             >
           </div>
